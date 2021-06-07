@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Search</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="resources\css\searchbar.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <!--Above Header-->
+  <div class="header-container">
+    <div class="container-fluid">
+      <p class="userlogo">Hi, John <i class="fa fa-user"></i></p>
+    </div>
+  </div>
+
+  <!--Main Header-->
+  <nav class="navbar navbar-expand-lg cust-nav bg-light">
+    <img src="Resources/Images/mphasis-logo.png" alt="Mphasis logo" style="width:140px">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContentLG"
+      aria-controls="navbarSupportedContentLG" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContentLG">
+      <ul class="navbar-nav mr-auto w-100 justify-content-end">
+        <li class="nav-item ">
+          <a class="nav-link " href="#">DASHBOARD </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">TEAM MANAGEMENTS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">TEAM CONTACTS </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!--Searchbar-->
+  <div class="searchbar-container">
+    <div class="container-fluid ">
+      <section>
+        <div class="row">
+          <div class="col-md-4 col-lg-4 col-sm-12 ">
+            <div class="form-group filter-search ">
+              <label for="email">Select Display Type</label>
+              <select class="selectpicker  form-control" required>
+                <option value="" disabled selected>Filter</option>
+                <option value="active">Grid View</option>
+                <option value="inactive">Card View</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-12">
+            <div class="form-group has-search">
+              <label for="email">Search By EID</label>
+              <span class="fa fa-search form-control-feedback"></span>
+              <input type="search" class="form-control" id="email" placeholder="search">
+            </div>
+          </div>
+          <div class="col-md-2 col-lg-2 col-sm-12 ">
+            <div class="form-group search-button">
+              <button type="submit" class="btn9 btn-primary">SEARCH</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!--Search results-->
+  <div class="body-container">
+    <div class="container-fluid">
+      <button class="btn4 btn-warning">SEARCH TEXT : 23 <i class="fa fa-close"> </i> </button>
+      <button class="btn5 btn-warning ">CLEAR ALL</button>
+
+      <!--Cards Title-->
+      <div class="title-contacts">
+        <h6>Team Contacts</h6>
+      </div>
+
+      <!--Displaying Cards-->
+      <div class="cards-container">
+        <div class="container">
+          <div class="row ">
+            <div class="col-md-4">
+              <div class="card card-1">
+                <div class="row no-gutters">
+                  <div class="col">
+                    <img src="Resources/Images/Userfemale.png" alt="Male Logo">
+                  </div>
+                  <div class="col">
+                    <div class="card-block ">
+                      <p class="card-title user-name"><b>HARITHA</b></p>
+                      <p class="card-title user-designation"><cite>UX Designer</cite></p>
+                      <p class="card-text user-id">2357032</p>
+                      <p class="card-text user-email">haritha@gmail.com</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="btn-wrapper text-center d-flex justify-content-between">
+                    <div class="btn6 btn-success ">Active</div>
+                    <a href="#"><i class="fa fa-edit" title="Edit User"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card card-1">
+                <div class="row no-gutters">
+                  <div class="col">
+                    <img src="Resources/Images/Userfemale.png" alt="Male Logo">
+                  </div>
+                  <div class="col">
+                    <div class="card-block ">
+                      <p class="card-title user-name"><b>HARIKA</b></p>
+                      <p class="card-title user-designation"><cite>UX Designer</cite></p>
+                      <p class="card-text user-id">23570323</p>
+                      <p class="card-text user-email">harika@gmail.com</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="btn-wrapper text-center d-flex justify-content-between">
+                    <div class="btn6 btn-danger ">Inactive</div>
+                    <a href="#"><i class="fa fa-edit" title="Edit User"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card card-1">
+                <div class="row no-gutters">
+                  <div class="col">
+                    <img src="Resources/Images/Usermale.png" alt="Male Logo">
+                  </div>
+                  <div class="col">
+                    <div class="card-block ">
+                      <p class="card-title user-name"><b>RAM PRASAD</b></p>
+                      <p class="card-title user-designation"><cite>UX Designer</cite></p>
+                      <p class="card-text">2357034</p>
+                      <p class="card-text user-email">prasad@gmail.com</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="btn-wrapper text-center d-flex justify-content-between">
+                    <div class="btn6 btn-success ">Active</div>
+                    <a href="#"><i class="fa fa-edit" title="Edit User"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row ">
+            <div class="col-md-4">
+              <div class="card card-1">
+                <div class="row no-gutters">
+                  <div class="col">
+                    <img src="Resources/Images/Userfemale.png" alt="Male Logo">
+                  </div>
+                  <div class="col">
+                    <div class="card-block ">
+                      <p class="card-title user-name"><b>VASAVI</b></p>
+                      <p class="card-title user-designation"><cite>UX Designer</cite></p>
+                      <p class="card-text">2357035</p>
+                      <p class="card-text user-email">vasavi@gmail.com</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="btn-wrapper text-center d-flex justify-content-between">
+                    <div class="btn6 btn-success ">Active</div>
+                    <a href="#"><i class="fa fa-edit" title="Edit User"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card card-1">
+                <div class="row no-gutters">
+                  <div class="col">
+                    <img src="Resources/Images/Userfemale.png" alt="Male Logo">
+                  </div>
+                  <div class="col">
+                    <div class="card-block ">
+                      <p class="card-title user-name"><b>PAVITHRA</b></p>
+                      <p class="card-title user-designation"><cite>UX Designer</cite></p>
+                      <p class="card-text">2357036</p>
+                      <p class="card-text user-email">pavithra@gmail.com</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="btn-wrapper text-center d-flex justify-content-between">
+                    <div class="btn6 btn-danger ">Inactive</div>
+                    <a href="#"><i class="fa fa-edit" title="Edit User"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card card-1">
+                <div class="row no-gutters">
+                  <div class="col">
+                    <img src="Resources/Images/Usermale.png" alt="Male Logo">
+                  </div>
+                  <div class="col">
+                    <div class="card-block ">
+                      <p class="card-title user-name"><b>NAVEEN</b></p>
+                      <p class="card-title user-designation"><cite>UX Designer</cite></p>
+                      <p class="card-text">2357037</p>
+                      <p class="card-text user-email">naveen@gmail.com</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="btn-wrapper text-center d-flex justify-content-between">
+                    <div class="btn6 btn-success ">Active</div>
+                    <a href="#"><i class="fa fa-edit" title="Edit User"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center ">
+            <div class="col-md-4">
+              <div class="card card-1">
+                <div class="row no-gutters">
+                  <div class="col">
+                    <img src="Resources/Images/Usermale.png" alt="Male Logo">
+                  </div>
+                  <div class="col">
+                    <div class="card-block ">
+                      <p class="card-title user-name"><b>MOHAN</b></p>
+                      <p class="card-title user-designation"><cite>UX Designer</cite></p>
+                      <p class="card-text">2357038</p>
+                      <p class="card-text user-email">mohan@gmail.com</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="btn-wrapper text-center d-flex justify-content-between">
+                    <div class="btn6 btn-success ">Active</div>
+                    <a href="#"><i class="fa fa-edit" title="Edit User"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card card-1">
+                <div class="row no-gutters">
+                  <div class="col">
+                    <img src="Resources/Images/Usermale.png" alt="Male Logo">
+                  </div>
+                  <div class="col">
+                    <div class="card-block ">
+                      <p class="card-title user-name"><b>VASU</b></p>
+                      <p class="card-title user-designation"><cite>UX Designer</cite></p>
+                      <p class="card-text">2357039</p>
+                      <p class="card-text user-email">vasu@gmail.com</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="btn-wrapper text-center d-flex justify-content-between">
+                    <div class="btn6 btn-danger ">Inactive</div>
+                    <a href="#"><i class="fa fa-edit" title="Edit User"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <!--pagination-->
+     <div class="container-fluid pagination-container">
+     <a href="#"><i class="fa fa-angle-double-left left-icon"></i></a>
+     <!--total no of records in pagination-->
+     <p>Total Records: 16</p>
+     <!--total records per page dropdown. Limit upto 50records-->
+     <label for="records" class="records-per-page">Records/Page:</label>
+     <select class="select-dropdown-records " name="records">
+       <option value="8">8</option>
+       <option value="10">10</option>
+       <option value="20">20</option>
+       <option value="30">30</option>
+       <option value="40">40</option>
+       <option value="50">50</option>
+     </select>
+     <!--go to page textbar-->
+     <label for="gotopage" class="gotopage">Goto Page:
+       <input type="text" name="gotopage" class="gotopage-textbox"> of 5</label>
+     <a href="#"><i class="fa fa-angle-double-right right-icon"></i></a>
+   </div>
+   
+    <!--Footer-->
+    <div class="footer-container">
+      <div class="container-fluid">
+        <footer class="page-footer font-small text-white">
+          <div class="footer-copyright text-center py-3">
+            Copyrights have been reserved for this page
+          </div>
+        </footer>
+      </div>
+    </div>
+</body>
+
+</html>
