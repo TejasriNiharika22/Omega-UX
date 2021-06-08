@@ -373,4 +373,30 @@ img {
     padding-top: 0.5rem;
   }
 }
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #e6f7ff;
+  margin-left: 1.8rem;
+  margin-top: 1.5rem;
+  border-radius: 1rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #005580;
+  height: 2rem;
+  border-radius: 1rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 /*# sourceMappingURL=searchbar.css.map */
