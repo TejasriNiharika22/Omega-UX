@@ -76,6 +76,12 @@
     width: 100%;
   }
 
+  .navbar .navbar-nav .nav-link.active{
+
+    color:#8083af ;
+    position: relative;
+  }
+
   /* Footer */
   .footer-container{
   .container-fluid{
@@ -198,6 +204,7 @@
   margin-right: 0.5rem;
   background-color: rgb(14, 113, 194);
   font-weight: bold;
+ 
  }
 
 .btn5{
@@ -278,7 +285,7 @@ p{
 }
 }
 
-.btn6{
+.status-active{
   width:6rem;
   height: 2.1rem; 
   border-radius: 1rem;
@@ -287,6 +294,22 @@ p{
   margin-top: 0.3rem;
   text-align: center;
   line-height: 2rem;
+  background-color: green;
+  color: #fff;
+
+}
+
+.status-inactive{
+  width:6rem;
+  height: 2.1rem; 
+  border-radius: 1rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 0.3rem;
+  text-align: center;
+  line-height: 2rem;
+  background-color: red;
+  color: #fff;
 
 }
 .card-block{
@@ -298,13 +321,17 @@ p{
      }
   }
 @media only screen and (min-device-width: 767px) and (max-device-width: 991px) {
+  
    img{
    padding-left: 4rem;
    padding-bottom: 0.3rem;
 }
+  
+.card-block{
    p{
-     padding-left: 3.5rem;
+    text-align: center;
    }
+  }
 }
 
 //*pagination*//
