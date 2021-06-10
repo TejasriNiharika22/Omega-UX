@@ -33,7 +33,11 @@
   
 .navbar{
         height: 5rem;
+    img{
+      width:8rem;
+      margin-left: 1.5rem;
     }
+  }
     .navbar .nav-item {
     padding: 10px 20px;
   }
@@ -58,10 +62,30 @@
     
   }
   .navbar-nav li.active > a {
-    border-bottom: 4px solid #2310cf;
+    border-bottom: 3px solid #2310cf;
       
     }
- 
+
+    .navbar .navbar-nav .nav-link:hover {
+      color: #8083af;
+    }
+    .navbar .navbar-nav .nav-link::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      background-color: #215ac4;
+      color: transparent;
+      width: 0%;
+      content: '.';
+      height: 3px;
+    }
+    .navbar .navbar-nav .nav-link:hover::after {
+      width: 100%;
+    }
+  
+    
   
   /* Footer */
   .footer-container{
@@ -153,6 +177,12 @@
       }
     }
 
+    .search-button{
+      .btn9{
+        background-color: rgb(33, 8, 255);
+      }
+
+    }
 @media only screen and (max-width: 767px) {
       .searchbar-container{
         .container-fluid {
@@ -202,7 +232,7 @@
 /* Cards Title */
 
 .title-contacts{
-  h6{
+  h1{
     padding-top: 1.5rem;
     padding-bottom: 2rem;
     padding-left:1.5rem;
@@ -214,7 +244,7 @@
 }
 @media only screen and (min-device-width: 700px) and (max-device-width: 1040px){
     .title-contacts{
-      h6{
+      h1{
        padding-left: 2rem;
           }
         }
@@ -248,11 +278,12 @@ margin-bottom: 3rem;
    transform: scale(1.05);
 box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
 }
-
+.card{
 img{
     float:left;
-    width: 130px;
+    width: 8rem;
     padding-left: 0.5rem;
+}
 }
 .card-block{
 p{
@@ -286,7 +317,7 @@ p{
   margin-top: 0.3rem;
   text-align: center;
   line-height: 2rem;
-  background-color: red;
+  background-color: rgb(148, 11, 11);
   color: #fff;
 
 }
@@ -294,32 +325,40 @@ p{
     .user-email{
           
     color:rgb(25, 0, 255);
+    font-size: 0.8rem;
     text-decoration: underline;
     font-weight: bold;
+    
      }
   }
 @media only screen and (min-device-width: 767px) and (max-device-width: 991px) {
   
+  .card{
    img{
-   padding-left: 4rem;
+   padding-left: 4.5rem;
    padding-bottom: 0.3rem;
 }
-  
+}
+
 .card-block{
    p{
     text-align: center;
    }
   }
+
+  .card-block{
+    .user-email{
+      padding-left: 2.5rem;
+    }
+  }
 }
 
 //*pagination*//
-.pagination-container{
- 
-  margin-top: 0.3rem;
+.pagination-container {
+  margin: 3rem;
   margin-left: -2rem;
   display: inline-flex;
   justify-content: center;
-  margin-bottom: 2.5rem;
 
   .left-icon {
       font-size: 1.9rem;
@@ -356,7 +395,6 @@ p{
 }
 
 @media screen and (min-device-width: 562px) and (max-device-width: 800px) {
-
   .pagination-container {
       margin-left: 1rem;
       justify-content: center;
@@ -377,27 +415,25 @@ p{
           padding-left: 2rem;
       }
   }
-
 }
 
 @media screen and (max-width: 561px) {
-
-  .pagination-container{
+  .pagination-container {
       display: block;
       justify-content: center;
       margin-bottom: 7rem;
 
       p {
           font-size: 1rem;
-          padding-left: 30%;
+          padding-left: 27%;
       }
 
       .records-per-page {
-          padding-left: 30%;
+          padding-left: 27%;
       }
 
       .gotopage {
-          padding-left: 30%;
+          padding-left: 27%;
           display: block;
           padding-top: 1rem;
       }
@@ -413,7 +449,6 @@ p{
           padding-top: 0.5rem;
       }
   }
-
 }
 
 /* Scrollbar */
