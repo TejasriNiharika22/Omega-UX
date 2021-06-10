@@ -1,0 +1,526 @@
+/*scrollbar*/
+.scroll-bar {
+  overflow-y: scroll;
+  height: 543px;
+  overflow-x: scroll;
+  width: 98%;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #e6f7ff;
+  margin-left: 1.8rem;
+  margin-top: 1.5rem;
+  border-radius: 1rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #005580;
+  height: 2rem;
+  border-radius: 1rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/*team contacts heading and add users icon*/
+.team-contacts-heading {
+  margin-top: 2rem;
+}
+
+.team-contacts-heading h1 {
+  padding-left: 2%;
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #291ba8;
+}
+
+.team-contacts-heading a .fa-user-plus {
+  float: right;
+  padding-right: 2.2%;
+  font-size: 2rem;
+}
+
+/*table-grid*/
+.all-users-grid {
+  margin-top: 1.5rem;
+}
+
+.all-users-grid table {
+  margin-left: 2.2%;
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+
+.all-users-grid tr {
+  border: 1px solid #e0ebeb;
+}
+
+.all-users-grid th {
+  position: -webkit-sticky;
+  position: sticky;
+  top: -0.5rem;
+  background-color: #cce6ff;
+  color: black;
+  font-weight: bold;
+  font-size: 1.15rem;
+}
+
+.all-users-grid td, .all-users-grid th {
+  padding: 1rem;
+  text-align: left;
+}
+
+.all-users-grid td .fa-eye, .all-users-grid th .fa-eye {
+  font-size: 1.3rem;
+}
+
+.all-users-grid td .fa-edit, .all-users-grid th .fa-edit {
+  padding-left: 1rem;
+  font-size: 1.3rem;
+}
+
+.all-users-grid .status-active {
+  color: #0a800a;
+}
+
+.all-users-grid .status-inactive {
+  color: #ca1d1d;
+}
+
+.all-users-grid #sno, .all-users-grid #id, .all-users-grid #emailid, .all-users-grid #actions, .all-users-grid #status, .all-users-grid #name {
+  padding-left: 2rem;
+}
+
+@media screen and (max-width: 1100px) {
+  .scroll-bar {
+    overflow-y: scroll;
+    height: 1000px;
+    overflow-x: scroll;
+    width: 98%;
+  }
+  .all-users-grid table {
+    margin-top: 0.5rem;
+  }
+  .all-users-grid table, .all-users-grid tbody, .all-users-grid td, .all-users-grid th, .all-users-grid tr {
+    display: block;
+  }
+  .all-users-grid thead tr {
+    position: absolute;
+    top: -9999;
+    left: -9999rem;
+  }
+  .all-users-grid tr {
+    border-bottom: 1px solid #ccc;
+  }
+  .all-users-grid td, .all-users-grid th {
+    border: none;
+    padding-left: 45%;
+    border-bottom: 1px solid #eee;
+    position: relative;
+  }
+  .all-users-grid td:before, .all-users-grid th:before {
+    position: absolute;
+    top: 1rem;
+    left: 0.4rem;
+    width: 45%;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+  .all-users-grid td:nth-of-type(1):before, .all-users-grid th:nth-of-type(1):before {
+    content: "SNo";
+  }
+  .all-users-grid td:nth-of-type(2):before, .all-users-grid th:nth-of-type(2):before {
+    content: "EmployeeID";
+  }
+  .all-users-grid td:nth-of-type(3):before, .all-users-grid th:nth-of-type(3):before {
+    content: "Name";
+  }
+  .all-users-grid td:nth-of-type(4):before, .all-users-grid th:nth-of-type(4):before {
+    content: "Email";
+  }
+  .all-users-grid td:nth-of-type(5):before, .all-users-grid th:nth-of-type(5):before {
+    content: "Status";
+    color: black;
+  }
+  .all-users-grid td:nth-of-type(6):before, .all-users-grid th:nth-of-type(6):before {
+    content: "Actions";
+  }
+}
+
+.pagination-container {
+  margin: 3rem;
+  margin-left: -2rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pagination-container .left-icon, .pagination-container .right-icon {
+  font-size: 1.9rem;
+  padding-top: 0.5rem;
+}
+
+.pagination-container .right-icon {
+  padding-left: 5rem;
+}
+
+.pagination-container p, .pagination-container .records-per-page {
+  padding-top: 0.8rem;
+  padding-left: 5rem;
+}
+
+.pagination-container .gotopage {
+  padding-left: 5rem;
+}
+
+.pagination-container .gotopage-textbox {
+  width: 2.5rem;
+  margin-top: 0.5rem;
+  height: 2.1rem;
+}
+
+.pagination-container select {
+  margin-top: 0.5rem;
+  height: 2.2rem;
+  width: 2.7rem;
+  margin-left: 0.3rem;
+}
+
+@media screen and (min-device-width: 562px) and (max-device-width: 800px) {
+  .pagination-container {
+    margin-left: 1rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .pagination-container p {
+    padding-left: 2rem;
+  }
+  .pagination-container .records-per-page {
+    padding-left: 1rem;
+  }
+  .pagination-container .gotopage {
+    padding-left: 1rem;
+  }
+  .pagination-container .right-icon {
+    padding-left: 2rem;
+  }
+}
+
+@media screen and (max-width: 561px) {
+  .pagination-container {
+    display: block;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 7rem;
+  }
+  .pagination-container p {
+    font-size: 1rem;
+    padding-left: 27%;
+  }
+  .pagination-container .records-per-page {
+    padding-left: 27%;
+  }
+  .pagination-container .gotopage {
+    padding-left: 27%;
+    display: block;
+    padding-top: 1rem;
+  }
+  .pagination-container .right-icon {
+    float: right;
+    padding-right: 2rem;
+  }
+  .pagination-container .left-icon, .pagination-container .right-icon {
+    padding-left: 2rem;
+    font-size: 1.9rem;
+    padding-top: 0.5rem;
+  }
+}
+
+.adduser .modal .modal-header {
+  background-color: #060652;
+  color: white;
+}
+
+.adduser .modal .modal-header .times {
+  color: white;
+}
+
+.adduser .modal h1 {
+  font-size: 1.3rem;
+  color: white;
+}
+
+.adduser .modal .modal-body {
+  color: #060652;
+  font-weight: bold;
+}
+
+.adduser .modal .modal-body .btn-primary {
+  background-color: #2108ff;
+}
+
+.adduser .modal .modal-body .form-row {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.adduser .modal .modal-body .col-md-6 {
+  margin-bottom: 1rem;
+}
+
+.adduser .modal .modal-body select:not(:checked) {
+  background-color: white;
+}
+
+.adduser .modal .modal-body .submit-button {
+  margin-top: 1rem;
+}
+
+.adduser .modal .modal-body input[type=text], .adduser .modal .modal-body input[type=email], .adduser .modal .modal-body input[type=select] {
+  background-color: white;
+}
+
+.adduser .modal .modal-body label::after {
+  content: "*";
+  color: red;
+  padding-left: 0.2rem;
+}
+
+.view .view-users {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+.view .modal-header {
+  background-color: #060652;
+  color: white;
+}
+
+.view .modal-header .times {
+  color: white;
+}
+
+.view h1 {
+  font-size: 1.3rem;
+  color: white;
+}
+
+.view .static-data {
+  color: black;
+}
+
+.view .btn-primary {
+  background-color: #2108ff;
+}
+
+.view .modal-footer {
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+}
+
+.view .disabled-color input[type=text], .view .disabled-color input[type=email] {
+  background-color: #e0e0d1;
+}
+
+.view select {
+  background-color: #e0e0d1;
+}
+
+* {
+  font-family: sans-serif;
+}
+
+/* Above Header */
+.header-container .container-fluid {
+  height: 2rem;
+}
+
+.userlogo {
+  text-align: right;
+  padding-top: 0.3rem;
+  padding-right: 1.6rem;
+  color: #2310cf;
+  font-weight: bold;
+}
+
+.fa-user {
+  padding-left: 0.5rem;
+  font-size: 1rem;
+  color: black;
+}
+
+/* Main header  */
+.cust-nav {
+  position: -webkit-sticky;
+  position: relative;
+  top: 0;
+  z-index: 1020;
+}
+
+.navbar {
+  height: 5rem;
+}
+
+.navbar img {
+  width: 8rem;
+  margin-left: 1.5rem;
+}
+
+.navbar .nav-item {
+  padding: 10px 20px;
+}
+
+.fa-bars {
+  color: #090342;
+  font-size: 30px;
+}
+
+.navbar-toggler {
+  height: 3rem;
+}
+
+.navbar .navbar-nav .nav-link {
+  color: #2310cf;
+  position: relative;
+  padding-right: .5rem;
+  padding-left: .5rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.navbar-nav li.active > a {
+  border-bottom: 3px solid #2310cf;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+  color: #8083af;
+}
+
+.navbar .navbar-nav .nav-link::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #215ac4;
+  color: transparent;
+  width: 0%;
+  content: '.';
+  height: 3px;
+}
+
+.navbar .navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Footer */
+.footer-container .container-fluid {
+  height: 6rem;
+  width: 100%;
+  background-color: #6e6b6b;
+  padding-top: 1.2rem;
+  bottom: 0;
+  position: relative;
+}
+
+/* Media query for above header */
+@media screen and (max-width: 992px) {
+  .header-container {
+    display: none;
+  }
+}
+
+/* Media query for main Header */
+@media screen and (max-width: 975px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    float: left;
+    font-size: 1rem;
+    color: #090342;
+    height: 1.5rem;
+    padding: 0.01rem;
+  }
+  .navbar-nav {
+    background-color: #f8f9fa;
+    padding-top: 0.9rem;
+    padding-bottom: 0.9rem;
+    margin-top: 1.5rem;
+  }
+}
+
+.edit .modal .modal-header {
+  background-color: #060652;
+  color: white;
+}
+
+.edit .modal .modal-header .times {
+  color: white;
+}
+
+.edit .modal h1 {
+  font-size: 1.3rem;
+  color: white;
+}
+
+.edit .modal .modal-body {
+  color: #060652;
+  font-weight: bold;
+}
+
+.edit .modal .modal-body .btn-primary {
+  background-color: #2108ff;
+}
+
+.edit .modal .modal-body .form-row {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.edit .modal .modal-body .col-md-6 {
+  margin-bottom: 1rem;
+}
+
+.edit .modal .modal-body select:not(:checked) {
+  background-color: white;
+}
+
+.edit .modal .modal-body .submit-button {
+  margin-top: 1rem;
+}
+
+.edit .modal .modal-body input[type=text], .edit .modal .modal-body input[type=email], .edit .modal .modal-body input[type=select] {
+  background-color: white;
+}
+
+.edit .modal .modal-body label::after {
+  content: "*";
+  color: red;
+  padding-left: 0.2rem;
+}
+/*# sourceMappingURL=main.css.map */

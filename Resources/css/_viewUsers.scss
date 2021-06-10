@@ -1,0 +1,42 @@
+.view {
+    .view-users {
+        flex-direction: row;
+        align-self: flex-end;
+        margin-top: 1rem;
+        margin-right: 1rem;
+    }
+    .modal-header {
+        background-color: rgb(6, 6, 82);
+        color: white;
+
+        .times {
+            color: white;
+        }
+    }
+
+    h1 {
+        font-size: 1.3rem;
+        color: white;
+    }
+
+    .static-data {
+        color: black;
+    }
+    .btn-primary {
+        background-color: rgb(33, 8, 255);;
+    }
+
+    .modal-footer {
+        justify-content: center !important;
+    }
+
+    .disabled-color {
+        input[type=text], input[type=email] {
+            background-color: #e0e0d1;
+        }
+    }
+
+    select {
+        background-color: #e0e0d1;
+    }
+}

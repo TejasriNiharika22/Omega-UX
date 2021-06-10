@@ -1,0 +1,176 @@
+/*scrollbar*/
+.scroll-bar {
+    overflow-y: scroll;
+    height: 543px;
+    overflow-x: scroll;
+    width: 98%;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #e6f7ff;
+    margin-left: 1.8rem;
+    margin-top: 1.5rem;
+    border-radius: 1rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #005580;
+    height: 2rem;
+    border-radius: 1rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/*team contacts heading and add users icon*/
+.team-contacts-heading {
+    margin-top: 2rem;
+
+    h1 {
+        padding-left: 2%;
+        font-weight: bold;
+        font-size: 1.4rem;
+        color: #291ba8;
+    }
+
+    a {
+        .fa-user-plus {
+            float: right;
+            padding-right: 2.2%;
+            font-size: 2rem;
+        }
+    }
+}
+
+/*table-grid*/
+.all-users-grid {
+    margin-top: 1.5rem;
+
+    table {
+        margin-left: 2.2%;
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid #ddd;
+    }
+
+    tr {
+        border: 1px solid #e0ebeb;
+    }
+
+    th {
+        position: sticky;
+        top: -0.5rem;
+        background-color: #cce6ff;
+        color: black;
+        font-weight: bold;
+        font-size: 1.15rem;
+
+        @extend td;
+    }
+
+    td {
+        padding: 1rem;
+        text-align: left;
+
+        .fa-eye {
+            font-size: 1.3rem;
+        }
+
+        .fa-edit {
+            padding-left: 1rem;
+            font-size: 1.3rem;
+        }
+    }
+
+    .status-active {
+        color: rgb(10, 128, 10);
+    }
+
+    .status-inactive {
+        color: rgb(202, 29, 29);
+    }
+
+    #sno, #id, #emailid, #actions, #status, #name {
+        padding-left: 2rem;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .scroll-bar {
+        overflow-y: scroll;
+        height: 1000px;
+        overflow-x: scroll;
+        width: 98%;
+    }
+
+    .all-users-grid {
+        table {
+            margin-top: 0.5rem;
+        }
+
+        table, tbody, td, tr {
+            display: block;
+        }
+
+        thead tr {
+            position: absolute;
+            top: -9999;
+            left: -9999rem;
+        }
+
+        tr {
+            border-bottom: 1px solid #ccc;
+        }
+
+        td {
+            border: none;
+            padding-left: 45%;
+            border-bottom: 1px solid #eee;
+            position: relative;
+        }
+
+        td:before {
+            position: absolute;
+            top: 1rem;
+            left: 0.4rem;
+            width: 45%;
+            white-space: nowrap;
+            font-weight: bold;
+        }
+
+        td:nth-of-type(1):before {
+            content: "SNo";
+        }
+
+        td:nth-of-type(2):before {
+            content: "EmployeeID";
+        }
+
+        td:nth-of-type(3):before {
+            content: "Name";
+        }
+
+        td:nth-of-type(4):before {
+            content: "Email";
+        }
+
+        td:nth-of-type(5):before {
+            content: "Status";
+            color: black;
+        }
+
+        td:nth-of-type(6):before {
+            content: "Actions";
+        }
+    }
+}
