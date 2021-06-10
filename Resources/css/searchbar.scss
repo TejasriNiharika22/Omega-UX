@@ -57,31 +57,12 @@
     font-size: 1.1rem;
     
   }
-  .navbar .navbar-nav .nav-link:hover {
-    color: #8083af;
-  }
-  .navbar .navbar-nav .nav-link::after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    background-color: #215ac4;
-    color: transparent;
-    width: 0%;
-    content: '.';
-    height: 3px;
-  }
-  .navbar .navbar-nav .nav-link:hover::after {
-    width: 100%;
-  }
-
-  .navbar .navbar-nav .nav-link.active{
-
-    color:#8083af ;
-    position: relative;
-  }
-
+  .navbar-nav li.active > a {
+    border-bottom: 4px solid #2310cf;
+      
+    }
+ 
+  
   /* Footer */
   .footer-container{
   .container-fluid{
@@ -195,24 +176,21 @@
   
 /* Search Results */
    
-.btn4{
-  height: 2.2rem; 
-  width: 12rem;
-  border-radius: 1rem;
-  margin-top: 2rem;
-  margin-left: 1rem;
-  margin-right: 0.5rem;
-  background-color: rgb(14, 113, 194);
-  font-weight: bold;
+.search-text{
  
- }
-
-.btn5{
-  width:8rem;
-  height: 2.1rem; 
-  border-radius: 1rem;
-  font-weight: bold;
+   margin-top: 2rem;
+   margin-left: 1.5rem;
 }
+ 
+.btn.circular {
+  border-radius: 50em !important;
+  background-color: rgb(255, 187, 0);
+  margin-right: 0.3rem;
+  font-size: small;
+  font-weight: bolder;
+  
+  }
+
 
 
 @media only screen and (max-width: 767px) {
@@ -225,9 +203,9 @@
 
 .title-contacts{
   h6{
-    padding-top: 2rem;
+    padding-top: 1.5rem;
     padding-bottom: 2rem;
-    padding-left:1rem;
+    padding-left:1.5rem;
     font-weight: bold;
     font-size: 1.3rem;
     color:#291ba8 ;
