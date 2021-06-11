@@ -230,8 +230,8 @@
                 </div>
                 <!--gender dropdown-->
                 <div class="col-md-6 form-group">
-                  <label for="gender" class="form-label">GENDER</label>
-                  <select class="custom-select is-invalid form-control" id="gender"  required >
+                  <label for="adduserGender" class="form-label">GENDER</label>
+                  <select class="custom-select is-invalid form-control" id="adduserGender"  required >
                     <option value="" disabled selected  >Select Gender</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
@@ -243,8 +243,8 @@
                 </div>
                 <!--status drowpdowm-->
                 <div class=" col-md-6 form-group">
-                  <label for="status" class="form-label">STATUS</label>
-                  <select class="custom-select is-invalid " id="status" required>
+                  <label for="adduserStatus" class="form-label">STATUS</label>
+                  <select class="custom-select is-invalid " id="adduserStatus" required>
                     <option value="" selected disabled>Select Status</option>
                     <option value="active">Active</option>
                     <option value="inactive">Inactive</option>
@@ -271,7 +271,7 @@
   <!--EDIT USERS-->
   <!-- Modal -->
   <div class="edit">
-    <div class="modal fade" id="editUsersModalPopup" role="dialog" 
+    <div class="modal fade" id="editUsersModalPopup" role="dialog" aria-labelledby="editUsersModalTitle"
       aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
@@ -333,7 +333,7 @@
   <!--VIEW USERS-->
   <!-- Modal -->
   <div class="view">
-    <div class="modal fade" id="viewUsersModalPopup" role="dialog" 
+    <div class="modal fade" id="viewUsersModalPopup" role="dialog" aria-labelledby="viewUsersModalTitle"
       aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
