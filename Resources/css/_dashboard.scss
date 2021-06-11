@@ -1,0 +1,177 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.teams-image
+{
+    height: 20rem;
+    width: 80%;
+   margin: 3rem;
+}
+
+.static-heading{
+h1{
+    font-weight: bold;
+    padding-top: 8rem;
+    color:  #291ba8;
+}
+p{
+  padding-left: 0.5rem;
+  font-size: 1.2rem;
+}
+}
+.project-static,.team-announce-tasks,.webview-leaders{
+  margin-bottom: 4rem;
+}
+
+.table-row-heading{
+ 
+  color: white;
+  background-color: rgb(6, 6, 82);
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 1rem 0;
+}
+.table-bordered{
+
+  thead{
+    display: none;
+  }
+td:first-child{
+  width: 10%;
+  font-size: 2rem;
+  color: rgb(6, 6, 82);
+
+}
+td:last-child h2{
+font-size: 1.5rem;
+}
+}
+.scroll{
+  overflow-y:scroll;
+  height:340px;
+}
+
+div.flex-container-leaders {
+  display: flex;
+  justify-content: center;
+
+  padding: 20px 50px 20px 50px;
+ width: 100%;
+
+  div div.leader-image {
+  h3{
+font-size: 1.5rem;
+  }
+  h4{
+font-size:1rem ;
+  }
+}
+}
+
+
+.carousel{
+  width: 100%;
+}
+
+a.carousel-control-next, a.carousel-control-prev {
+  width: 3%;
+}
+
+
+.fa-angle-left,.fa-angle-right{
+  font-size: 4rem;
+  color: black;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+}
+
+.flex-container-leaders > div {
+  //background-color: #f1f1f1;
+  border: 1px solid #dee2e6;
+ width: 100%;
+  margin: 10px;
+  padding: 0 5px 0 5px;
+  text-align: center;
+  line-height: 350px;
+  font-size: 30px;
+}
+
+
+//leader icon sizes
+.carousel-inner img {
+  width: 70%;
+  height: 70%;
+}
+
+//leaders display in webview
+div.row.mobileview-leaders{
+  display: none;
+}
+
+// Media query for leaders section
+@media (max-width: 760px){
+  .flex-container-leaders{
+    //flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  div.row.webview-leaders{
+    display: none;
+  }
+
+  div.row.mobileview-leaders{
+    display: block;
+  }
+  .carousel-inner img {
+    width: 60%;
+    height: 70%;
+  }
+  .flex-container-leaders > div {
+   
+    line-height: 250px;
+  }
+
+  .fa-angle-left{
+    font-size: 2rem;
+   
+    padding-left: 2rem;
+   
+  }
+  
+  .fa-angle-right{
+    font-size: 2rem;
+   
+    
+    padding-right: 2rem;
+  }
+  
+  .table-row-heading{
+   margin-top: 4rem;
+  }
+
+
+  .static-heading{
+    h1{
+        font-size: 2.1rem;
+        padding-top: 1.5rem;
+    }
+  }
+ 
+}
+
+  //media query for main heading to be in center
+@media (max-width:400px){
+
+  .static-heading h1{
+    text-align: center;
+  }
+}
+
+
+
+
