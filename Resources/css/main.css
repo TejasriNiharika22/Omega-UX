@@ -35,7 +35,7 @@
 
 .navbar img {
   width: 8rem;
-  margin-left: 1.5rem;
+  margin-left: 1rem;
 }
 
 .navbar .nav-item {
@@ -130,12 +130,13 @@
   width: 95%;
 }
 
-.btn9 {
+.search-button .btn {
   height: 2.3rem;
   border-radius: 1rem;
   font-weight: bold;
   margin-top: 2rem;
   width: 100%;
+  background-color: #2108ff;
 }
 
 .has-search .form-control {
@@ -162,21 +163,17 @@
   color: #fff;
 }
 
-.search-button .btn9 {
-  background-color: #2108ff;
-}
-
 @media only screen and (max-width: 767px) {
   .searchbar-container .container-fluid {
     height: 15rem;
   }
 }
 
-@media only screen and (min-device-width: 370px) and (max-device-width: 767px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
   .searchbar-container .container-fluid {
     height: 18rem;
   }
-  .search-button .btn9 {
+  .search-button .btn {
     margin-top: 1rem;
   }
 }
@@ -193,12 +190,7 @@
   margin-right: 0.3rem;
   font-size: small;
   font-weight: bolder;
-}
-
-@media only screen and (max-width: 767px) {
-  .btn4 {
-    margin-left: 0.5rem;
-  }
+  height: 2.4rem;
 }
 
 /* Cards Title */
