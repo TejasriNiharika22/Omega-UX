@@ -565,11 +565,11 @@
   font-size: 1.3rem;
 }
 
-.all-users-grid .status-active {
+.all-users-grid .status-active-green {
   color: #0a800a;
 }
 
-.all-users-grid .status-inactive {
+.all-users-grid .status-inactive-red {
   color: #ca1d1d;
 }
 
