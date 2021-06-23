@@ -1,0 +1,51 @@
+.edit {
+    .modal {
+        .modal-header {
+            background-color: rgb(6, 6, 82);
+            color: white;
+
+            .times {
+                color: white;
+            }
+        }
+        h1 {
+            font-size: 1.3rem;
+            color: white;
+        }
+        .modal-body {
+            color: rgb(6, 6, 82);
+            font-weight: bold;
+
+            .btn-primary {
+                background-color: rgb(33, 8, 255);;
+            }
+
+            .form-row {
+                justify-content: center;
+                margin-bottom: 1rem;
+            }
+
+            .col-md-6 {
+                margin-bottom: 1rem;
+            }
+
+            select:not(:checked) {
+                background-color: white;
+            }
+
+            .submit-button {
+                margin-top: 1rem;
+            }
+
+            input[type=text], input[type=email], input[type=select] {
+                background-color: white;
+            }
+
+            label::after {
+                content: "*";
+                color: red;
+                padding-left: 0.2rem;
+            }
+        }
+    }
+}

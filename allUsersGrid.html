@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="resources/css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    
+  <title>TeamContacts</title>
+</head>
+<body>
+    <!--Above Header-->
+    <div class="header-container">
+      <div class="container-fluid">
+        <p class="userlogo">Hi, John <i class="fa fa-user"></i></p>
+      </div>
+    </div>
+  
+    <!--Main Header-->
+    <nav class="navbar navbar-expand-lg cust-nav bg-light">
+      <img src="Resources/Images/mphasis-logo.png" alt="Mphasis logo" >
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContentLG"
+        aria-controls="navbarSupportedContentLG" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        <i class="fa fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContentLG">
+        <ul class="navbar-nav mr-auto w-100 justify-content-end">
+          <li class="nav-item">
+          <a class="nav-link" href="#">DASHBOARD </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">TEAM MANAGEMENTS</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link active" href="#">TEAM CONTACTS <span class="sr-only">(current)</span></a>
+        </li>
+        </ul>
+      </div>
+    </nav>
+    
+<!--search bar-->
+    <div class="searchbar-container">
+      <div class="container-fluid ">
+        <section>
+          <div class="row">
+            <div class="col-md-5 col-lg-5 col-sm-12 ">
+              <div class="form-group filter-search ">
+                <label for="gridfilter">Select Display Type</label>
+                <select class="selectpicker  form-control" id="gridfilter" required>
+                  <option value="" disabled selected>Filter</option>
+                  <option value="active">Grid View</option>
+                  <option value="inactive">Card View</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-5 col-lg-5 col-sm-12">
+              <div class="form-group has-search">
+                <label for="email" class="form-label">Search By EID</label>
+                <span class="fa fa-search form-control-feedback"></span>
+                <input type="search" class="form-control" id="email" placeholder="search">
+              </div>
+            </div>
+            <div class="col-md-2 col-lg-2 col-sm-12 ">
+              <div class="form-group search-button">
+                <button type="submit" class="btn btn-primary">SEARCH</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+<main>
+  <!--Table heading and add user icon-->
+  <div class="team-contacts-heading">
+    <h1>Team Contacts
+      <a href="#addUsersModalPopup" data-toggle="modal" aria-label="addUserIcon"> <i class="fa fa-user-plus" title="Add Users"></i></a><br>
+    </h1>
+  </div>
+  <!--Table-->
+  <div class="scroll-bar">
+    <div class="all-users-grid">
+      <table>
+        <!--table header-->
+        <thead>
+          <tr>
+            <th>SNO<i class="fa fa-sort-down" id="sno"></i></th>
+            <th>USERID<i class="fa fa-sort-up" id="id"></i></th>
+            <th>NAME<i class="fa fa-sort" id="name"></i></th>
+            <th>EMAIL<i class="fa fa-sort" id="emailid"></i> </th>
+            <th>STATUS<i class="fa fa-sort" id="status"></i></th>
+            <th>ACTIONS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!--table data-->
+          <tr>
+            <td>1.</td>
+            <td>MPH17659</td>
+            <td>Harika Yarlagadda</td>
+            <td>Harika@mphasis.com</td>
+            <td class="status-active">Active</td>
+            <td>
+              <a href="#viewUsersModalPopup" data-toggle="modal" aria-label="viewUserIcon"><i class="fa fa-eye" title="View User"></i></a>
+              <a href="#editUsersModalPopup" data-toggle="modal" aria-label="editUserIcon"><i class="fa fa-edit" title="Edit User"></i></a>
+            </td>
+          </tr>
+          <tr>
+            <td>2.</td>
+            <td>MPH34559</td>
+            <td>Haritha</td>
+            <td>Haritha@mphasis.com</td>
+            <td class="status-active">Active</td>
+            <td><a href="#viewUsersModalPopup" data-toggle="modal" aria-label="viewUserIcon"><i class="fa fa-eye" title="View User"></i></a>
+              <a href="#editUsersModalPopup" data-toggle="modal" aria-label="editUserIcon"><i class="fa fa-edit" title="Edit User"></i></a>
+            </td>
+          </tr>
+          <tr>
+            <td>3.</td>
+            <td>MPH56813</td>
+            <td>Vasavi</td>
+            <td>Vasavi@mphasis.com</td>
+            <td class="status-inactive">Inactive</td>
+            <td><a href="#viewUsersModalPopup" data-toggle="modal" aria-label="viewUserIcon"><i class="fa fa-eye" title="View User"></i></a>
+              <a href="#editUsersModalPopup" data-toggle="modal" aria-label="editUserIcon"><i class="fa fa-edit" title="Edit User"></i></a>
+            </td>
+          </tr>
+          <tr>
+            <td>4.</td>
+            <td>MPH89654</td>
+            <td>Ram Prasad</td>
+            <td>Ram@mphasis.com</td>
+            <td class="status-active">Active</td>
+            <td><a href="#viewUsersModalPopup" data-toggle="modal" aria-label="viewUserIcon"><i class="fa fa-eye" title="View User"></i></a><a
+                href="#editUsersModalPopup" data-toggle="modal" aria-label="editUserIcon"><i class="fa fa-edit" title="Edit User"></i></a> </td>
+          </tr>
+          <tr>
+            <td>5.</td>
+            <td>MPH21535</td>
+            <td>Supriya</td>
+            <td>Supriya@mphasis.com</td>
+            <td class="status-inactive">Inactive</td>
+            <td><a href="#viewUsersModalPopup" data-toggle="modal" aria-label="viewUserIcon"><i class="fa fa-eye" title="View User"></i></a><a
+                href="#editUsersModalPopup" data-toggle="modal" aria-label="editUserIcon"><i class="fa fa-edit" title="Edit User"></i></a> </td>
+          </tr>
+          <tr>
+            <td>6.</td>
+            <td>MPH78555</td>
+            <td>Tom</td>
+            <td>Tom@mphasis.com</td>
+            <td class="status-inactive">Inactive</td>
+            <td><a href="#viewUsersModalPopup" data-toggle="modal" aria-label="viewUserIcon"><i class="fa fa-eye" title="View User"></i></a><a
+                href="#editUsersModalPopup" data-toggle="modal" aria-label="editUserIcon"><i class="fa fa-edit" title="Edit User"></i></a> </td>
+          </tr>
+          <tr>
+            <td>7.</td>
+            <td>MPH25445</td>
+            <td>Jack</td>
+            <td>Jack@mphasis.com</td>
+            <td class="status-active">Active</td>
+            <td><a href="#viewUsersModalPopup" data-toggle="modal" aria-label="viewUserIcon"><i class="fa fa-eye" title="View User"></i></a><a
+                href="#editUsersModalPopup" data-toggle="modal" aria-label="editUserIcon"><i class="fa fa-edit" title="Edit User"></i></a> </td>
+          </tr>
+          <tr>
+            <td>8.</td>
+            <td>MPH43335</td>
+            <td>Sirisha</td>
+            <td>Sirisha@mphasis.com</td>
+            <td class="status-active">Active</td>
+            <td><a href="#viewUsersModalPopup" data-toggle="modal" aria-label="viewUserIcon"><i class="fa fa-eye" title="View User"></i></a><a
+                href="#editUsersModalPopup" data-toggle="modal" aria-label="editUserIcon"><i class="fa fa-edit" title="Edit User"></i></a> </td>
+          </tr>
+          <tr>
+            <td>9.</td>
+            <td>MPH55445</td>
+            <td>Ferb</td>
+            <td>ferb@mphasis.com</td>
+            <td class="status-active">Active</td>
+            <td><a href="#viewUsersModalPopup" data-toggle="modal" aria-label="viewUserIcon"><i class="fa fa-eye" title="View User"></i></a><a
+                href="#editUsersModalPopup" data-toggle="modal" aria-label="editUserIcon"><i class="fa fa-edit" title="Edit User"></i></a> </td>
+          </tr>
+          <tr>
+            <td>10.</td>
+            <td>MPH25885</td>
+            <td>Jerry</td>
+            <td>jerry@mphasis.com</td>
+            <td class="status-inactive">Inactive</td>
+            <td><a href="#viewUsersModalPopup" data-toggle="modal" aria-label="viewUserIcon"><i class="fa fa-eye" title="View User"></i></a><a
+                href="#editUsersModalPopup" data-toggle="modal" aria-label="editUserIcon"><i class="fa fa-edit" title="Edit User"></i></a> </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+
+  <!--pagination-->
+  <div class="container-fluid pagination-container">
+    <a href="#"  aria-label="PreviousIcon"><i class="fa fa-angle-double-left left-icon" title="Previous"></i></a>
+    <!--total no of records in pagination-->
+    <p>Total Records: 16</p>
+    <!--total records per page dropdown. Limit upto 50records-->
+    <label for="records" class="records-per-page form-label">Records/Page:</label>
+    <select class="select-dropdown-records " id="records" name="records" >
+      <option value="8">8</option>
+      <option value="10">10</option>
+      <option value="20">20</option>
+      <option value="30">30</option>
+      <option value="40">40</option>
+      <option value="50">50</option>
+    </select>
+    <!--go to page textbar-->
+    <label for="gotopage" class="gotopage form-label">Goto Page:
+      <input type="text" name="gotopage" id="gotopage" class="gotopage-textbox"> of 5</label>
+    <a href="#"  aria-label="NextIcon"><i class="fa fa-angle-double-right right-icon" title="Next" ></i></a>
+  </div>
+  </main>
+  <!--ADD USERS-->
+  <!-- Modal -->
+  <div class="adduser">
+    <div class="modal fade" id="addUsersModalPopup" role="dialog" aria-labelledby="addUsersModalTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <!--add user title-->
+          <div class="modal-header">
+            <h1 class="modal-title" id="addUsersModalTitle"><strong>Add User</strong></h1>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="times">x</span>
+            </button>
+          </div>
+
+          <!--form-->
+          <div class="modal-body">
+            <form class="needs-validation">
+              <div class="form-row">
+                <!--username textbox-->
+                <div class="col-md-6">
+                  <label for="adduserName" class="form-label">USER NAME</label>
+                  <input type="text" class="form-control is-invalid" id="adduserName" placeholder="Enter Username"
+                    required>
+                  <div class="invalid-feedback">
+                    Username already taken
+                  </div>
+                </div>
+                <!--email box-->
+                <div class="col-md-6">
+                  <label for="adduserEmail" class="form-label">EMAIL</label>
+                  <input type="email" class="form-control is-invalid " id="adduserEmail" placeholder="Enter Email"
+                    required>
+                  <div class="invalid-feedback">
+                    Enter correct email address
+                  </div>
+                </div>
+                <!--gender dropdown-->
+                <div class="col-md-6 form-group">
+                  <label for="adduserGender" class="form-label">GENDER</label>
+                  <select class="custom-select is-invalid form-control" id="adduserGender"  required >
+                    <option value="" disabled selected  >Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="others">Others</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please select one option
+                  </div>
+                </div>
+                <!--status drowpdowm-->
+                <div class=" col-md-6 form-group">
+                  <label for="adduserStatus" class="form-label">STATUS</label>
+                  <select class="custom-select is-invalid " id="adduserStatus" required>
+                    <option value="" selected disabled>Select Status</option>
+                    <option value="active">Active</option>
+                    <option value="inactive">Inactive</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please select one option
+                  </div>
+                </div>
+
+                <!--Submit and Close buttons-->
+                <div class="submit-button">
+                  <button class="btn btn-primary" type="submit">Submit</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--EDIT USERS-->
+  <!-- Modal -->
+  <div class="edit">
+    <div class="modal fade" id="editUsersModalPopup" role="dialog" aria-labelledby="editUsersModalTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <!-- edit users title-->
+          <div class="modal-header">
+            <h1 class="modal-title" id="editUsersModalTitle"><strong>Edit User Details</strong></h1>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="times">x</span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <form>
+              <div class="form-row">
+                <!--username textbox-->
+                <div class="col-md-6">
+                  <label for="edituserName" class="form-label">USER NAME</label>
+                  <input type="text" class="form-control" id="edituserName" value="Harika Yarlagadda" required>
+                </div>
+                <!--email box-->
+                <div class="col-md-6">
+                  <label for="edituserEmail" class="form-label">EMAIL</label>
+                  <input type="email" class="form-control" id="edituserEmail" value="harikayarlagadda@yahoo.com"
+                    required>
+                </div>
+                <!--gender dropdown-->
+                <div class="col-md-6 form-group">
+                  <label for="EditGender" class="form-label">GENDER</label>
+                  <select class="selectpicker form-control" id="EditGender" required>
+                    <option value="" disabled>Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female" selected>Female</option>
+                    <option value="others">Others</option>
+                  </select>
+                </div>
+                <!--status drowpdowm-->
+                <div class="col-md-6 form-group">
+                  <label for="EditStatus" class="form-label">STATUS</label>
+                  <select class="selectpicker form-control" id="EditStatus" required>
+                    <option value="" disabled>Select Status</option>
+                    <option value="active" selected>Active</option>
+                    <option value="inactive">Inactive</option>
+                  </select>
+                </div>
+
+                <!--Submit and Close buttons-->
+                <div class="submit-button">
+                  <button class="btn btn-primary" type="submit">Submit</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--VIEW USERS-->
+  <!-- Modal -->
+  <div class="view">
+    <div class="modal fade" id="viewUsersModalPopup" role="dialog" aria-labelledby="viewUsersModalTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <!--view users title-->
+          <div class="modal-header">
+            <h1 class="modal-title" id="viewUsersModalTitle"><strong>View User Details</strong></h1>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="times">x</span>
+            </button>
+          </div>
+          <!--Edit button-->
+          <div class="view-users">
+            <button type="button" class="btn btn-primary edit-button" value="edit">Edit</button>
+          </div>
+
+          <div class="modal-body">
+            <div class="form-row disabled-color">
+              <!--username textbox-->
+              <div class="form-group col-md-6">
+                <label for="viewuserName" class="form-label">USER NAME</label>
+                <input type="text" class="form-control" id="viewuserName" value="Harika Yarlagadda" disabled>
+              </div>
+              <!--email box-->
+              <div class="form-group col-md-6">
+                <label for="viewuserEmail" class="form-label">EMAIL</label>
+                <input type="email" class="form-control" id="viewuserEmail" value="harikayarlagadda@yahoo.com" disabled>
+              </div>
+              <!--gender dropdown-->
+              <div class="col-md-6 form-group ">
+                <label for="viewuserGender" class="form-label">GENDER</label>
+                <select class="selectpicker form-control" id="viewuserGender" required>
+                  <option value="" disabled>Select Gender</option>
+                  <option value="male" disabled>Male</option>
+                  <option value="female" disabled="disabled" selected>Female</option>
+                  <option value="others" disabled>Others</option>
+                </select>
+              </div>
+              <!--status drowpdowm-->
+              <div class="col-md-6 form-group ">
+                <label for="viewuserStatus" class="form-label">STATUS</label>
+                <select class="selectpicker form-control dropdown-disable" id="viewuserStatus" required>
+                  <option value="" disabled>Select Status</option>
+                  <option value="active" disabled selected>Active</option>
+                  <option value="inactive" disabled>Inactive</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!--close button-->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Footer-->
+  <div class="footer-container">
+    <div class="container-fluid">
+      <footer class="page-footer font-small text-white">
+        <div class="footer-copyright text-center py-3">
+          Copyrights have been reserved for this page
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>
+
+</html>
