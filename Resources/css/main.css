@@ -1,3 +1,75 @@
+.searchbar-container .container-fluid {
+  background-color: #060652;
+  border: 1px solid black;
+  border-radius: 1.5rem;
+  padding-top: 2rem;
+  height: 9rem;
+  margin-top: 3%;
+  width: 95%;
+}
+
+.search-button .btn {
+  height: 2.3rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  width: 100%;
+  background-color: #2108ff;
+}
+
+.has-search .form-control {
+  padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}
+
+.has-search label {
+  color: #fff;
+}
+
+.filter-search label {
+  color: #fff;
+}
+
+@media only screen and (max-width: 767px) {
+  .searchbar-container .container-fluid {
+    height: 15rem;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+  .searchbar-container .container-fluid {
+    height: 18rem;
+  }
+  .search-button .btn {
+    margin-top: 1rem;
+  }
+}
+
+.search-text {
+  margin-top: 2rem;
+  margin-left: 1.5rem;
+}
+
+.btn.circular {
+  border-radius: 50em !important;
+  background-color: #ffbb00;
+  margin-right: 0.3rem;
+  font-size: small;
+  font-weight: bolder;
+  height: 2.4rem;
+}
+
 /*scrollbar*/
 .scroll-bar {
   overflow-y: scroll;

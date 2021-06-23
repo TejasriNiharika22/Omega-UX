@@ -45,6 +45,38 @@
         </ul>
       </div>
     </nav>
+    
+<!--search bar-->
+    <div class="searchbar-container">
+      <div class="container-fluid ">
+        <section>
+          <div class="row">
+            <div class="col-md-5 col-lg-5 col-sm-12 ">
+              <div class="form-group filter-search ">
+                <label for="gridfilter">Select Display Type</label>
+                <select class="selectpicker  form-control" id="gridfilter" required>
+                  <option value="" disabled selected>Filter</option>
+                  <option value="active">Grid View</option>
+                  <option value="inactive">Card View</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-5 col-lg-5 col-sm-12">
+              <div class="form-group has-search">
+                <label for="email" class="form-label">Search By EID</label>
+                <span class="fa fa-search form-control-feedback"></span>
+                <input type="search" class="form-control" id="email" placeholder="search">
+              </div>
+            </div>
+            <div class="col-md-2 col-lg-2 col-sm-12 ">
+              <div class="form-group search-button">
+                <button type="submit" class="btn btn-primary">SEARCH</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
 
 <main>
   <!--Table heading and add user icon-->
