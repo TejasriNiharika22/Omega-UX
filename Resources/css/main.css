@@ -216,6 +216,7 @@ button.post-button {
   margin-top: 0.625rem;
   float: right;
   margin-bottom: 1.25rem;
+  border-radius: 2rem;
   padding-right: 0.5rem;
 }
 
@@ -837,6 +838,7 @@ div.row.mobileview-leaders {
   margin: 0.313rem 0 1.25rem 0;
   font-size: 1.563rem;
   padding: 0.313rem 1.263rem 0.313rem 1.263rem;
+  border-radius: 2rem;
 }
 
 .form-style .email-send i {
@@ -1499,6 +1501,7 @@ button.post-button {
   float: right;
   margin-bottom: 1.25rem;
   padding-right: 0.5rem;
+  border-radius: 2rem;
 }
 
 button.post-button i {
