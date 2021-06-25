@@ -2098,4 +2098,93 @@ button.post-button i {
     padding-top: 0.5rem;
   }
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+.sidebar-storybook {
+  z-index: 1;
+  left: 0;
+  overflow-x: hidden;
+  -webkit-box-shadow: 3px 3px 2px grey;
+          box-shadow: 3px 3px 2px grey;
+  width: 120%;
+  height: 100%;
+  position: relative;
+  background-color: #060652;
+  padding-top: 2rem;
+}
+
+.sidebar-menu li {
+  width: 100%;
+  margin-bottom: 1.7rem;
+  padding-left: 1rem;
+}
+
+.sidebar-menu .dropdown-menu {
+  background-color: white;
+}
+
+.sidebar-menu .dropdown-item {
+  color: #060652;
+}
+
+.sidebar-menu .dropdown-item:hover {
+  background-color: #e4dede;
+  color: #060652;
+}
+
+.sidebar-menu .dropdown-toggle {
+  color: white;
+}
+
+.sidebar-menu a {
+  color: white;
+  white-space: initial;
+}
+
+.sidebar-menu a:hover {
+  color: white;
+}
+
+.main-content-storybook {
+  margin: 2rem;
+}
+
+.main-content-storybook {
+  color: #291ba8;
+}
+
+.main-content-storybook .layout-controls-storybook h2, .main-content-storybook .headings-storybook h2, .main-content-storybook .dropdown-storybook h2 {
+  font-weight: bold;
+  margin: 2rem 0rem;
+}
+
+.main-content-storybook .layout-controls-storybook h4, .main-content-storybook .headings-storybook h4, .main-content-storybook .dropdown-storybook h4 {
+  margin: 1rem;
+  padding: 1rem 0;
+}
+
+.headings-tags {
+  font-weight: 0px !important;
+}
+
+.label-requried label::after {
+  content: "*";
+  color: red;
+  padding-left: 0.2rem;
+}
+
+@media (max-width: 760px) {
+  .main-content {
+    margin-left: 0px !important;
+  }
+}
 /*# sourceMappingURL=main.css.map */
